@@ -1,0 +1,122 @@
+.output-panel {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.output-panel h2 {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  font-weight: 600;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 8px;
+}
+
+.output-panel h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.token-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.token-list th,
+.token-list td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.token-list th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.tree-container {
+  margin-top: 1rem;
+  height: 400px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.parse-tree-section p {
+  margin: 1rem 0 0;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.ir-section pre,
+.token-list pre {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  line-height: 1.6;
+  color: #111827;
+}
+
+.ir-section {
+  margin-top: 2rem;
+}
+
+.download-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.download-btn {
+  background-color: #10b981;
+  /* Emerald green */
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .download-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-btn {
+    width: 90%;
+    font-size: 15px;
+    padding: 12px;
+  }
+}

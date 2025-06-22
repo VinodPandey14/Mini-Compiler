@@ -2,10 +2,20 @@ import React from "react";
 
 function CompileButton({ grammarRef, codeRef, setOutput }) {
   const handleCompile = () => {
-    const code = document.getElementById("code").value;
-    const grammar = document.getElementById("grammar").value;
+    if (!grammarRef.current || !codeRef.current) {
+      console.warn("Missing refs for grammar or code");
+      setOutput({
+        tokens: [],
+        parsed: "",
+        ir: "Error: Missing grammar or code input area",
+      });
+      return;
+    }
 
-    const data = { code, grammar };
+    const grammar = grammarRef.current.getValue?.() || "";
+    const code = codeRef.current.getValue?.() || "";
+
+    const data = { grammar, code };
 
     console.log("Data:", data);
 
@@ -20,7 +30,11 @@ function CompileButton({ grammarRef, codeRef, setOutput }) {
       .then((result) => {
         if (result.error) {
           console.error("Error:", result.error);
-          setOutput({ tokens: [], parsed: "", ir: `Error: ${result.error}` });
+          setOutput({
+            tokens: [],
+            parsed: "",
+            ir: `Error: ${result.error}`,
+          });
         } else {
           console.log("Compilation result:", result);
           setOutput(result);
