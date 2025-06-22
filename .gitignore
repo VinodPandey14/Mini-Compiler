@@ -1,0 +1,29 @@
+# Python
+# Python
+**/__pycache__/
+**/*.py[cod]
+*.egg-info/
+.env
+.DS_Store
+**/*.out
+**/parsetab.py
+
+
+# Flask
+instance/
+*.db
+*.sqlite
+
+# React
+node_modules/
+build/
+dist/
+*.log
+.env.local
+.env.development
+.env.production
+
+# VSCode/JetBrains
+.vscode/
+.idea/
+*.iml
