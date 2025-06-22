@@ -19,7 +19,7 @@ function CompileButton({ grammarRef, codeRef, setOutput }) {
 
     console.log("Data:", data);
 
-    fetch("http://127.0.0.1:5000/compile", {
+    fetch("https://mini-compiler-t39w.onrender.com/compile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
