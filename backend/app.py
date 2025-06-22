@@ -1,14 +1,15 @@
 from flask import Flask, request, jsonify
 from compiler.engine import process_code
-from flask_cors import CORS # type: ignore
+from flask_cors import CORS  # type: ignore
+import os
 
 app = Flask(__name__)
-CORS(app)  
+CORS(app)
 
 @app.route('/compile', methods=['POST'])
 def compile_code():
     try:
-        data = request.json  
+        data = request.json
         print("Received Data:", data)
 
         if 'code' not in data or not isinstance(data['code'], str):
@@ -26,4 +27,5 @@ def compile_code():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
