@@ -72,11 +72,11 @@ npm start
 Runs at: http://localhost:3000
 ```
 
-# 📥 Downloads
+### 📥 Downloads
 
-### ✅ Output report (compiler_output.txt)
+✅ Output report (compiler_output.txt)
 
-### 🌳 Parse tree image (parse_tree.svg)
+🌳 Parse tree image (parse_tree.svg)
 
 ---
 
