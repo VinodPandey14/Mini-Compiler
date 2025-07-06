@@ -4,7 +4,8 @@ from flask_cors import CORS  # type: ignore
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://mini-compiler.netlify.app"}})
+
 
 @app.route('/compile', methods=['POST'])
 def compile_code():
